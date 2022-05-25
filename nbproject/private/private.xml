@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/public/index.php</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/routes/web.php</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/resources/views/users/index.blade.php</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/resources/views/layouts/app.blade.php</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/resources/views/home.blade.php</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/resources/views/welcome.blade.php</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/app/Http/Controllers/UserController.php</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/resources/views/auth/login.blade.php</file>
+        </group>
+    </open-files>
+</project-private>
