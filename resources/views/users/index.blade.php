@@ -34,21 +34,9 @@
 </div>
 @endsection
 @section('javascript')
-    $(function() {
-    $('.delete').click(function(){
-            $.ajax({
-            method: "DELETE",
-            url: "http://obozmarzen.test/users/" + $(this).data("id")
-          })
-            .done(function( response ) {
-              alert( "SUKCES");
-            })
-            .fail(function (response){
-                alert( "error");
-                    });
-                
-        });
-    });
+    const deleteUrl = "{{url('users')}}/" ;
+@endsection
 
-
+@section('js-files')
+    <script src="{{ asset('js/delete.js') }}"></script>
 @endsection

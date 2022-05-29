@@ -1,7 +1,10 @@
 window._ = require('lodash');
 
 try {
-    require('bootstrap');
+    window.$ = window.jQuery = require('jquery');
+    window.Popper = require('@popperjs/core');
+    window.Swal = require('sweetalert2');
+    window.bootstrap = require('bootstrap');
 } catch (e) {}
 
 /**
