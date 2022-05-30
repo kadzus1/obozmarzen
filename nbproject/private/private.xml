@@ -3,12 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/package.json</file>
-            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/resources/js/bootstrap.js</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/app/Models/Oboz.php</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/resources/views/obozy/create.blade.php</file>
             <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/routes/web.php</file>
-            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/resources/views/users/index.blade.php</file>
             <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/resources/views/layouts/app.blade.php</file>
-            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/resources/sass/app.scss</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/app/Http/Controllers/Middleware/Authenticate.php</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/resources/views/home.blade.php</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/app/Http/Controllers/ObozController.php</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/app/Http/Controllers/HomeController.php</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/resources/views/welcome.blade.php</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/app/Http/Controllers/Middleware/TrustProxies.php</file>
+            <file>file:/C:/Users/User/Desktop/Projekt/obozmarzen/app/Http/Controllers/Middleware/VerifyCsrfToken.php</file>
         </group>
     </open-files>
 </project-private>

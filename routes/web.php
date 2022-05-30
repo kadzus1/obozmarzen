@@ -16,7 +16,7 @@ use App\Http\Controllers\ObozController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome2');
 });
 Route::get('/obozy',[ObozController::class, 'index'])->name('obozy.index')->middleware('auth') ;
 Route::get('/obozy/create',[ObozController::class, 'create'])->name('obozy.create')->middleware('auth') ;
