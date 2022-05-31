@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ObozController;
+use App\Http\Controllers\WelcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,9 @@ use App\Http\Controllers\ObozController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/',[WelcomeController::class, 'index']);
 
-Route::get('/', function () {
-    return view('welcome2');
-});
+
 Route::get('/obozy',[ObozController::class, 'index'])->name('obozy.index')->middleware('auth') ;
 Route::get('/obozy/create',[ObozController::class, 'create'])->name('obozy.create')->middleware('auth') ;
 Route::get('/obozy/{oboz}',[ObozController::class, 'show'])->name('obozy.show')->middleware('auth') ;

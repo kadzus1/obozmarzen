@@ -39,7 +39,10 @@ class ObozController extends Controller
     public function store(Request $request) : RedirectResponse
     {
         $oboz = new Oboz($request->all());
-        $oboz -> save();
+        if ($request->hasFile('image')) {
+            $oboz->image_path = $request->file('image')->store('obozy');
+        }
+        $oboz->save();
         return redirect(route('obozy.index'));
     }
 
@@ -75,6 +78,9 @@ class ObozController extends Controller
     public function update(Request $request, Oboz $oboz) : RedirectResponse
     {
         $oboz->fill($request->all());
+        if ($request->hasFile('image')) {
+            $oboz->image_path = $request->file('image')->store('obozy');
+        }
         $oboz->save();
         return redirect(route('obozy.index'));
     }

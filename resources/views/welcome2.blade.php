@@ -4,65 +4,53 @@
 <div class="container">
   
 <link rel="stylesheet" href="{{asset('/css/main.css')}}" />
-    <div class="inner">
-    <header class="major">
-    <h1>WYBIERZ SWÓJ OBÓZ MARZEŃ</h1>
-    </header>
-    <div class="content">
-    <p>Morze? Góry? Jeziora? Czy zagraniczne destynacje? Tutaj znajdziesz wszystko czego pragniesz!</p>
-    </div>
-    </div>
+<noscript><link rel="stylesheet" href="{{asset('/css/noscript.css')}}" /></noscript>
 
-        <div id="main">
+<html>
+	<head>
+		<title>Obóz marzeń</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
+		
+	</head>
+	<body class="is-preload">
 
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+						<div class="inner">
+							<header class="major">
+								<h1>WYBIERZ SWÓJ OBÓZ MARZEŃ</h1>
+							</header>
+							<div class="content">
+								<p>Morze? Góry? Jeziora? Czy zagraniczne destynacje? Tutaj znajdziesz wszystko czego pragniesz!</p>
+							</div>
+						</div>
+
+				<!-- Main --> 
+					
 						<!-- One -->
 							<section id="one" class="tiles">
+                                                            @foreach($obozy as $oboz)
 								<article>
 									<span class="image">
-										<img src="images/kids.jpg" alt="" />
+                                                                                <img src="{{ asset('storage/' .$oboz->image_path) }}" class="img-fluid mx-auto d-block" alt="Zdjęcie produktu">
+                                                                           
 									</span>
 									<header class="major">
-										<h3><a href="kids.html" class="link">Obozy dla dzieci (6-12)</a></h3>
+										<h3><a href="kids.html" class="link">{{$oboz->name}}</a></h3>
+                                                                                <h3>{{$oboz->price}} PLN</h3>
 									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/adult1.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="adults.html" class="link">Obozy dla młodzieży (13-18)</a></h3>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/sea.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="sea.html" class="link">Obozy nad morzem</a></h3>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/lake.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="lake.html" class="link">Obozy nad jeziorem</a></h3>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/aboard.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="aboard.html" class="link">Obozy za granicą</a></h3>
-									</header>
-								</article>
-								
+                                                                    
+								</article>@endforeach
 							</section>
-
-
 					</div>
-<!-- Contact -->
+                                
+
+
+
+				<!-- Contact -->
 					<section id="contact">
 						<div class="inner">
 							<section>
@@ -113,20 +101,28 @@
 							</section>
 						</div>
 					</section>
-<footer id="footer">
+
+				<!-- Footer -->
+					<footer id="footer">
 						<div class="inner">
 							<ul class="copyright">
 								<li>&copy; obozymarzen</li><li>Design: Kaja Nowicka</li>
 							</ul>
 						</div>
 					</footer>
-<!-- Scripts -->
-			<script src="/js/jquery.min.js"></script>
-			<script src="/js/jquery.scrolly.min.js"></script>
-			<script src="/js/jquery.scrollex.min.js"></script>
-			<script src="/js/browser.min.js"></script>
-			<script src="/js/breakpoints.min.js"></script>
-			<script src="/js/util.js"></script>
-			<script src="/js/main.js"></script>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
 </div>
 @endsection

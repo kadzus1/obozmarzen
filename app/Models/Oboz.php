@@ -14,6 +14,7 @@ class Oboz extends Model
      * @var array
      */
     protected $fillable = [
+        'image_path',
         'name',
         'description',
         'personLimit',

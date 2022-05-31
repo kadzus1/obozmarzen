@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('obozs', function (Blueprint $table) {
             $table->id();
+            $table->string('image_path', 255);
             $table->string('name', 50);
             $table->string('description', 500);
             $table->integer('personLimit');

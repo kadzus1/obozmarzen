@@ -47,6 +47,11 @@
 
                             </div>
                         </div>
+                    <div class="row mb-3">
+                            <div class="col-md-6">
+                                <img src="{{ asset('storage/' . $oboz->image_path) }}" alt="Zdjęcie produktu">
+                            </div>
+                        </div>
 
                     </form>
                
