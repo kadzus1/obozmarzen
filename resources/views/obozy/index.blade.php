@@ -20,6 +20,7 @@
             <th scope="col">Opis</th>
             <th scope="col">Limit osób</th>
             <th scope="col">Cena</th>
+            <th scope="col">Kategoria</th>
             <th scope="col">Akcje</th>
         </tr>
         </thead>
@@ -31,6 +32,7 @@
                 <td>{{ $oboz->description }}</td>
                 <td>{{ $oboz->personLimit }}</td>
                 <td>{{ $oboz->price }}</td>
+                <td>@if(!is_null($oboz->category)){{ $oboz->category->name}}@endif</td>
                 <td>
                     <a href="{{route('obozy.show', $oboz->id)}}">
                         <button class="btn btn-primary btn-sm ">Podgląd<br></button>

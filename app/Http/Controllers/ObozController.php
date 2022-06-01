@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Oboz;
+use App\Models\ObozCategory;
 use Exception;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -27,7 +28,7 @@ class ObozController extends Controller
      */
     public function create()
     {
-        return view("obozy.create");
+        return view("obozy.create", ['categories'=>ObozCategory::all()]);
     }
 
     /**
@@ -65,7 +66,10 @@ class ObozController extends Controller
      */
     public function edit(Oboz $oboz) : View
     {
-        return view("obozy.edit", ['oboz' => $oboz]);
+        return view("obozy.edit", [
+            'oboz' => $oboz,
+            'categories' => ObozCategory::all()
+        ]);
     }
 
     /**
