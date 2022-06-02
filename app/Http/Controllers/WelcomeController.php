@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Oboz;
+use App\Models\ObozCategory;
 use Exception;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -19,7 +20,8 @@ class WelcomeController extends Controller
     public function index(): View
     {
         return view("welcome2", [
-            'obozy' => Oboz::paginate(6)
+            'obozy' => Oboz::paginate(6),
+            'categories' => ObozCategory::all()
         ]);
     }
 }

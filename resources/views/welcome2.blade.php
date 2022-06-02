@@ -29,7 +29,18 @@
 						</div>
 
 				<!-- Main --> 
-					
+<div class="col-md-4 order-md-1 col-lg-3 sidebar-filter">
+    <h3 class="mt-0 mb-5">Obozy <span class="text-primary">{{count($obozy)}}</span></h3>
+                <h6 class="text-uppercase font-weight-bold mb-3">Kategorie</h6>
+                <div class="mt-2 mb-2 pl-2">
+                        @foreach($categories as $category)
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="category-{{$category->id}}">
+                        <label class="custom-control-label" for="category-{{$category->id}}">{{$category->name}}</label>
+                    </div>
+                         @endforeach
+                </div>
+</div>
 						<!-- One -->
 							<section id="one" class="tiles">
                                                             @foreach($obozy as $oboz)
