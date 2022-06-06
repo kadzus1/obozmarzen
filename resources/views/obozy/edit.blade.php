@@ -103,7 +103,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <img src="{{ asset('storage/' . $oboz->image_path) }}" alt="Zdjęcie produktu">
+                                <img src="{{ asset('storage/obozy/img.php?q=' . $oboz->image_path) }}" alt="Zdjęcie produktu">
                             </div>
                         </div>
 

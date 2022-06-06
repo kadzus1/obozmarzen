@@ -17,17 +17,14 @@ class WelcomeController extends Controller
      *@param Request $request
      * @return View|JsonResponse
      */
-    public function index(Request $request): View
+    public function index(Request $request): View|JsonResponse
     {
         $filters = $request -> query('filter');
-        $paginate = $request->query('paginate') ?? 5;
         
         $query = Oboz::query();
-        $query->paginate($paginate);
         if(!is_null($filters)){
-             if (array_key_exists('categories', $filters)) {
                 $query = $query->whereIn('category_id', $filters['categories']);
-            }
+            
         
             return response()->json([
                 'data'=> $query->get()
