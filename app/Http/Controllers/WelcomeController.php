@@ -14,14 +14,31 @@ class WelcomeController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @return View
+     *@param Request $request
+     * @return View|JsonResponse
      */
-    public function index(): View
+    public function index(Request $request): View
     {
+        $filters = $request -> query('filter');
+        $paginate = $request->query('paginate') ?? 5;
+        
+        $query = Oboz::query();
+        $query->paginate($paginate);
+        if(!is_null($filters)){
+             if (array_key_exists('categories', $filters)) {
+                $query = $query->whereIn('category_id', $filters['categories']);
+            }
+        
+            return response()->json([
+                'data'=> $query->get()
+            ]);
+        }
+        
+        
+        
         return view("welcome2", [
-            'obozy' => Oboz::paginate(6),
-            'categories' => ObozCategory::all()
+            'obozy' => $query->get(),
+            'categories' => ObozCategory::orderBy('name', 'ASC')->get()
         ]);
     }
 }

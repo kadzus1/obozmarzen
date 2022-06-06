@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
   
-<link rel="stylesheet" href="{{asset('/css/main.css')}}" />
+<link rel="stylesheet" href="{{asset('css/main.css')}}" />
 <noscript><link rel="stylesheet" href="{{asset('/css/noscript.css')}}" /></noscript>
 
 <html>
@@ -29,19 +29,22 @@
 						</div>
 
 				<!-- Main --> 
-<div class="col-md-4 order-md-1 col-lg-3 sidebar-filter">
+<form class="col-md-6 order-md-1  sidebar-filter">
+    
     <h3 class="mt-0 mb-5">Obozy <span class="text-primary">{{count($obozy)}}</span></h3>
                 <h6 class="text-uppercase font-weight-bold mb-3">Kategorie</h6>
-                <div class="mt-2 mb-2 pl-2">
+                <div class="mt-2 mb-2 pl-2" id="products-wrapper">
                         @foreach($categories as $category)
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="category-{{$category->id}}">
-                        <label class="custom-control-label" for="category-{{$category->id}}">{{$category->name}}</label>
+                    <div class="col-6 col-12-small">
+                        <input type="checkbox" name='filter[categories][]' id='category-{{$category->id}}' value="{{$category->id}}">
+                        <label for="category-{{$category->id}}">{{$category->name}}</label>
                     </div>
                          @endforeach
+                         <br><a  href="#" class="button" id="filter-button">Filtruj</a>
                 </div>
-</div>
-						<!-- One -->
+                
+</form><br>
+<!-- One --><div>
 							<section id="one" class="tiles">
                                                             @foreach($obozy as $oboz)
 								<article>
@@ -125,15 +128,19 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{{asset('/js/jquery.min.js')}}"></script>
+			<script src="{{asset('/js/jquery.scrolly.min.js')}}"></script>
+			<script src="{{asset('/js/jquery.scrollex.min.js')}}"></script>
+			<script src="{{asset('/js/browser.min.js')}}"></script>
+			<script src="{{asset('/js/breakpoints.min.js')}}"></script>
+			<script src="{{asset('/js/util.js')}}"></script>
+			<script src="{{asset('/js/main.js')}}"></script>
 
 	</body>
 </html>
 </div>
+@endsection
+
+@section('js-file')
+<script src="{{asset('/js/welcome2.js')}}"></script>
 @endsection
