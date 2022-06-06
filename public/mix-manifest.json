@@ -1,1 +1,6 @@
-{}
+{
+    "/js/app.js": "/js/app.js",
+    "/js/delete.js": "/js/delete.js",
+    "/js/welcome2.js": "/js/welcome2.js",
+    "/css/app.css": "/css/app.css"
+}

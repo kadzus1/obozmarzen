@@ -21,6 +21,7 @@
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->surname }}</td>
                 <td>{{ $user->phone_number }}</td>
+                <td>{{ $user->role }}</td>
                 <td>
                     <button class="btn btn-danger btn-sm delete" data-id="{{$user->id}}">
                         X
